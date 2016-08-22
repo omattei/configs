@@ -54,7 +54,7 @@ export D_MEDIA=$DATA/Media
 export D_GAMES=$DATA/Games
 export D_MUSIC=$D_MEDIA/Music
 export D_DOC=$DATA/Documents
-export D_DL=$DATA/Downloads
+export D_DL=$D_DOC/Downloads
 export D_FL=/media/fl
 
 export D_DROID=$DATA/Droid
