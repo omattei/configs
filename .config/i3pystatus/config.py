@@ -96,6 +96,11 @@ status.register("network",
 #    path="/",
 #    format="{used}/{total}G [{avail}G]",)
 
+# Shows backlight brightness
+status.register("backlight",
+    format="BL: {percentage}%",
+    base_path="/sys/class/backlight/intel_backlight/")
+
 # Shows pulseaudio default sink volume
 #
 # Note: requires libpulseaudio from PyPI
