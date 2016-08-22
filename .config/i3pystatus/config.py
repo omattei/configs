@@ -1,44 +1,50 @@
 # Configuration files for mongolia machine
 # Andrea Shaw <rshaw@olivermattei.net>
 from i3pystatus import Status
+from i3pystatus.weather import weathercom
 
 status = Status()
 
 # Displays clock like this:
-# Tue 30 Jul 11:59:46 PM KW31
-#                          ^-- calendar week
+# Tue 30 Jul 2016 11:59:46 PM KW31
 status.register("clock",
     format="%a %-d %b %Y %X KW%V",)
 
 # Shows the average load of the last minute and the last 5 minutes
 # (the default value for format is used)
 status.register("load",
+    # on left click, let us run a system monitor to see what's up
     on_leftclick="urxvt -name mongolia -e htop")
 
-# Show's CPU usage
-#status.register("cpu_usage_bar",)
+# Shows CPU usage
+# status.register("cpu_usage_bar",)
 status.register("cpu_usage_graph",)
 status.register("cpu_usage",
     format="CPU: {usage}%",)
 
+# NetSpeed module appears to not be functional atm
 #status.register("net_speed")
 status.register(
     'weather',
-    format='Temp: {current_temp} (Hi: {max_temp} Lo: {min_temp}) Hum: {humidity}%',
+    format='Current Temp: {current_temp}{temp_unit}[ (Hi: {high_temp}[{temp_unit}]] Lo: {low_temp}{temp_unit} Hum: {humidity}%',
     colorize=True,
-    location_code='22904:4:US',
+    backend=weathercom.Weathercom(
+	location_code='22904:4:US',
+        units='metric',
+    ),
 )
 
 # Shows your CPU temperature, if you have a Intel CPU
 status.register("temp",
     format="CPU: {temp:.0f}°C",)
-# Show GPU temp
-status.register("gpu_temp")
+
+# Show GPU temp --> missing files, does not work.
+#status.register("gpu_temp")
 
 # Displays whether a DHCP client is running
-status.register("runwatch",
-    name="DHCP",
-    path="/var/run/dhclient*.pid",)
+#status.register("runwatch",
+#    name="DHCP",
+#    path="/var/run/dhclient*.pid",)
 
 # Shows the address and up/down state of eth0. If it is up the address is shown in
 # green (the default value of color_up) and the CIDR-address is shown
@@ -51,6 +57,7 @@ status.register("network",
     interface="eth0",
     format_up="{v4cidr}",)
 
+#status.register("net_speed")
 # Note: requires both netifaces and basiciw (for essid and quality)
 #status.register("network",
 #    interface="wlp2s0",
