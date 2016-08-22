@@ -98,6 +98,7 @@ status.register("network",
 
 # Shows backlight brightness
 status.register("backlight",
+    interval=1,
     format="BL: {percentage}%",
     base_path="/sys/class/backlight/intel_backlight/")
 
