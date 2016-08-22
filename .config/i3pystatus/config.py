@@ -1,3 +1,6 @@
+# Configuration files for yemen machine
+# Andrea Shaw <rshaw@olivermattei.net>
+
 from i3pystatus import Status
 
 status = Status()
