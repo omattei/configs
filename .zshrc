@@ -61,6 +61,7 @@ export D_DROID=$DATA/Droid
 export D_DROIDROOT=$DATA/Droid/sdcard0
 
 export D_PDR=$HOME/dev/pdr/
+export D_ISA=$HOME/dev/isa/
 export R_PDR=/data/Repositories/pdr/
 # XDG settings
 export XDG_CACHE_HOME=~/.cache
