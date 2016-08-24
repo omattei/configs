@@ -166,7 +166,7 @@ bindsym XF86Search exec "rofi -show run"
 bindsym $mod+Shift+u exec "xautolockctl"
 
 # printscreen functionality
-bindsym --release Print exec "scrot '%Y-%m-%d_%H%M%S_$wx$h_scrot.png' -e 'mv $f /data/Pictures/screenshots/'"
+bindsym --release Print exec "scrot '%Y-%m-%d_%H%M%S_$wx$h_scrot.png' -e 'mv $f /home/polychoron/screenshots'"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
