@@ -54,6 +54,8 @@ export D_MEDIA=$DATA/Media
 export D_GAMES=$DATA/Games
 export D_MUSIC=$D_MEDIA/Music
 export D_DOC=$DATA/Documents
+export D_DROPBOX=$DATA/Dropbox
+export D_UVA=$D_DROPBOX/UVa_Classes
 export D_DL=$DATA/Downloads
 export D_FL=/media/fl
 
@@ -62,7 +64,9 @@ export D_DROIDROOT=$DATA/Droid/sdcard0
 
 #export D_PDR=/data/Dropbox/UVa_Classes/CS2150_PDR/
 export D_PDR=$HOME/dev/pdr
-export R_PDR=/data/Repositories/pdr/
+export D_TOC=$D_UVA/CS3102_Theory_of_Computation
+export D_ISA=$HOME/dev/isa
+export R_PDR=/data/Repositories/pdr
 # XDG settings
 export XDG_CACHE_HOME=~/.cache
 export XDG_CONFIG_HOME=~/.config
