@@ -38,5 +38,5 @@ xset -dpms &
 xmodshit &
 sleepytime &
 xautolock -time 10 -locker lock &
-dropboxd &
+dropbox &
 exec i3
