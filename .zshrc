@@ -66,7 +66,7 @@ export D_DROIDROOT=$DATA/Droid/sdcard0
 export D_PDR=$HOME/dev/pdr
 export D_TOC=$D_UVA/CS3102_Theory_of_Computation
 export D_ISA=$HOME/dev/isa
-export R_PDR=/data/Repositories/pdr
+export R_PDR=/data/Repositories/aaronbloomfield/pdr
 # XDG settings
 export XDG_CACHE_HOME=~/.cache
 export XDG_CONFIG_HOME=~/.config
