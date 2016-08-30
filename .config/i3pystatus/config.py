@@ -2,6 +2,7 @@
 # Andrea Shaw <rshaw@olivermattei.net>
 
 from i3pystatus import Status
+from i3pystatus.weather import weathercom
 
 status = Status()
 
@@ -23,12 +24,23 @@ status.register("cpu_usage",
     format="CPU: {usage}%",)
 
 #status.register("net_speed")
+#status.register(
+#    'weather',
+#    format='Temp: {current_temp} (Hi: {max_temp} Lo: {min_temp}) Hum: {humidity}%',
+#    colorize=True,
+#    location_code='22904:4:US',
+#)
+
 status.register(
     'weather',
-    format='Temp: {current_temp} (Hi: {max_temp} Lo: {min_temp}) Hum: {humidity}%',
+    format='Current Temp: {current_temp}{temp_unit}[ (Hi: {high_temp}[{temp_unit}]] Lo: {low_temp}{temp_unit} Hum: {humidity}%',
     colorize=True,
-    location_code='22904:4:US',
+    backend=weathercom.Weathercom(
+	location_code='22904:4:US',
+        units='metric',
+    ),
 )
+
 
 # Shows your CPU temperature, if you have a Intel CPU
 status.register("temp",
