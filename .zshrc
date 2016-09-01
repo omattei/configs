@@ -54,14 +54,19 @@ export D_MEDIA=$DATA/Media
 export D_GAMES=$DATA/Games
 export D_MUSIC=$D_MEDIA/Music
 export D_DOC=$DATA/Documents
+export D_DROPBOX=$DATA/Dropbox
+export D_UVA=$D_DROPBOX/UVa_Classes
 export D_DL=$DATA/Downloads
 export D_FL=/media/fl
 
 export D_DROID=$DATA/Droid
 export D_DROIDROOT=$DATA/Droid/sdcard0
 
-export D_PDR=/data/Dropbox/UVa_Classes/CS2150_PDR/
-export R_PDR=/data/Repositories/pdr/
+#export D_PDR=/data/Dropbox/UVa_Classes/CS2150_PDR/
+export D_PDR=$HOME/dev/pdr
+export D_TOC=$D_UVA/CS3102_Theory_of_Computation
+export D_ISA=$HOME/dev/isa
+export R_PDR=/data/Repositories/aaronbloomfield/pdr
 # XDG settings
 export XDG_CACHE_HOME=~/.cache
 export XDG_CONFIG_HOME=~/.config
@@ -93,7 +98,9 @@ alias aud0='sed -si "s/.card [1,2,3]/.card 0/g" ~/.asoundrc'
 alias aud1='sed -si "s/.card [0,2,3]/.card 1/g" ~/.asoundrc'
 alias aud2='sed -si "s/.card [0,1,3]/.card 2/g" ~/.asoundrc'
 alias aud3='sed -si "s/.card [0,1,2]/.card 3/g" ~/.asoundrc'
+
 alias ls='ls++ -al'
+alias lsp='ls++ --potsf'
 alias urxvt='urxvt -name mongolia'
 alias gp='git push'
 alias ga='git add'
