@@ -42,7 +42,7 @@ DISABLE_AUTO_UPDATE="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(git)
 
-source $ZSH_HOME/oh-my-zsh.sh
+source $ZSH/oh-my-zsh.sh
 
 # XDG settings
 export XDG_CACHE_HOME=~/.cache
