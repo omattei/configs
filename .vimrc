@@ -235,4 +235,5 @@ set grepprg=grep\ -nH\
 au FileType * exec("setlocal dictionary+=/usr/share/vim/vimfiles/dictionaries/".expand('<amatch>'))
 set complete+=
 
+au BufRead,BufNewFile *.md setlocal textwidth=80
 autocmd BufNewFile,BufRead *.tex set makeprg=pdflatex\ %\ &&\ evince\ %:r.pdf
