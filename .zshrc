@@ -85,9 +85,6 @@ export EDITOR=vim
 export PATH=$PATH:$BINARIES:$TLN
 export PYTHONPATH=$TLN/..:~/dev:$PYTHONPATH
 
-# Source www settings
-source $ZSH_HOME/www.zsh
-
 # Source virtualenvwrapper settings
 source $ZSH_HOME/virtualenvwrapper.zsh
 
