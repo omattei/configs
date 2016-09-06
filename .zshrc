@@ -159,7 +159,7 @@ unset GREP_OPTIONS
 
 alias more='less'
 
-alias spck="aspell -t -c"
+alias spellck="aspell -t -c"
 
 TZ='America/New_York'; export TZ
 HISTFILE=~/.zshhistory
