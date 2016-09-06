@@ -63,7 +63,7 @@ export D_DROID=$DATA/Droid
 export D_DROIDROOT=$DATA/Droid/sdcard0
 
 #export D_PDR=/data/Dropbox/UVa_Classes/CS2150_PDR/
-export D_PDR=$HOME/dev/pdr
+export D_PDR=$HOME/dev/pdr-content
 export D_TOC=$D_UVA/CS3102_Theory_of_Computation
 export D_ISA=$HOME/dev/isa
 export R_PDR=/data/Repositories/aaronbloomfield/pdr
@@ -88,13 +88,10 @@ export PYTHONPATH=$TLN/..:~/dev:$PYTHONPATH
 # Source virtualenvwrapper settings
 source $ZSH_HOME/virtualenvwrapper.zsh
 
-alias cd1='cd $D_PDR && ls'
-alias cd2='cd $DL && ls -tr'
 
-alias aud0='sed -si "s/.card [1,2,3]/.card 0/g" ~/.asoundrc'
-alias aud1='sed -si "s/.card [0,2,3]/.card 1/g" ~/.asoundrc'
-alias aud2='sed -si "s/.card [0,1,3]/.card 2/g" ~/.asoundrc'
-alias aud3='sed -si "s/.card [0,1,2]/.card 3/g" ~/.asoundrc'
+alias cd1='cd $D_PDR/Lab02 && ls'
+
+alias cd2='cd $DL && ls -tr'
 
 alias ls='ls++ -al'
 alias lsp='ls++ --potsf'
