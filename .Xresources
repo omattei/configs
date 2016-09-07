@@ -1,12 +1,12 @@
-Xft*dpi: 94
+Xft*dpi: 120
 Xft*antialias: true
 Xft*autohint: true
 Xft*rgba: vbgr
 
-#define FONT_NORMAL     xft:Profont:style=SemiCondensed:pixelsize=14,xft:Anonymous Pro:style=Regular:pixelsize=12:antialias=3:autohint=1:hintstyle=3
-#define FONT_BOLD       xft:Profont:embolden=1
-#define FONT_ITALIC     -misc-fixed-medium-r-normal--9-90-75-75-c-60-iso8859-1,6x9
-#define FONT_BOLDITALIC -misc-fixed-medium-r-normal--7-70-75-75-c-50-koi8
+#define FONT_NORMAL     xft:Inconsolata-g:pixelsize=16:embolden=1,xft:Anonymous Pro:style=Regular:pixelsize=10:antialias=3:autohint=1:hintstyle=3
+#define FONT_BOLD       xft:Inconsolata-g:style=Bold:slant=10:pixelsize=16:embolden=1
+#define FONT_ITALIC     xft:Inconsolata-g:style=Bold:slant=50:pixelsize=16:embolden=1
+#define FONT_BOLDITALIC FONT_ITALIC
 
 vte*font:       FONT_NORMAL
 vte*boldFont:   FONT_BOLD
@@ -39,17 +39,8 @@ mongolia.externalBorder:       0
 
 mongolia.font:             FONT_NORMAL
 mongolia.boldFont:         FONT_BOLD
-mongolia.italicFont:       xft:Profont:embolden=1
+mongolia.italicFont:       FONT_ITALIC
 mongolia.boldItalicFont:   FONT_BOLDITALIC
-
-URxvt*font1:                -xos4-terminus-medium-r-normal-*-13-*-*-*-*-*-*-1
-URxvt*font2:                -xos4-terminus-medium-r-normal-*-14-*-*-*-*-*-*-1
-URxvt*font3:                -xos4-terminus-medium-r-normal-*-15-*-*-*-*-*-*-1
-URxvt*font4:                -xos4-terminus-medium-r-normal-*-16-*-*-*-*-*-*-1
-URxvt*font5:                -xos4-terminus-medium-r-normal-*-17-*-*-*-*-*-*-1
-URxvt*font6:                -xos4-terminus-medium-r-normal-*-18-*-*-*-*-*-*-1
-URxvt*font7:                -xos4-terminus-medium-r-normal-*-19-*-*-*-*-*-*-1
-URxvt*font8:                -xos4-terminus-medium-r-normal-*-20-*-*-*-*-*-*-1
 
 mongolia*cutchars:             "()*,<>[]{}|'"
 mongolia*matcher.pattern.1:    \\bwww\\.[\\w-]+\\.[\\w./?&@#-]*[\\w/-]
