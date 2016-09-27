@@ -89,10 +89,10 @@ export PYTHONPATH=$TLN/..:~/dev:$PYTHONPATH
 source $ZSH_HOME/virtualenvwrapper.zsh
 
 
-alias cd1='cd $D_PDR/Lab03/postlab && ls'
+alias cd1='cd $D_PDR/Lab05/prelab && ls'
 alias cd2='cd $DL && ls -tr'
 alias cd3='cd $D_UVA/CS3102_Theory_of_Computation/Problem_Sets && ls'
-alias cd4='cd $D_UVA/CS3205_HCI/Project_1 && ls'
+alias cd4='cd $D_UVA/CS3205_HCI/Proj_2 && ls'
 
 alias ls='ls++ -al'
 alias lsp='ls++ --potsf'
