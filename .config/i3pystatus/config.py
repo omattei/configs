@@ -121,8 +121,14 @@ status.register("pulseaudio",
     format="♪: {volume}",)
 
 # Shows spotify status
-status.register("spotify",
-    format="{artist} —→ {title} ({length})",)
+#status.register("spotify",
+#    format="{artist} —→ {title} ({length})",)
+
+# Shows pianobar status
+status.register("pianobar",
+    format="{songartist} —→ {songtitle}",
+    songfile="/home/polychoron/.config/pianobar/song",
+    ctlfile="/home/polychoron/.config/pianobar/ctl")
 
 status.run()
 
