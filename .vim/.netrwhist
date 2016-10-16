@@ -1,8 +1,5 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =6
-let g:netrw_dirhist_1='/home/polychoron/.i3'
-let g:netrw_dirhist_2='/home/polychoron/.minecraft/Utilities/SeedFinder/candidates'
-let g:netrw_dirhist_3='/home/polychoron/.minecraft'
-let g:netrw_dirhist_4='/home/polychoron/.config/i3pystatus'
-let g:netrw_dirhist_5='/home/polychoron/.config'
-let g:netrw_dirhist_6='/home/polychoron/.config/i3pystatus'
+let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_1='/home/polychoron/dev/isa/api/app/CavTutor'
+let g:netrw_dirhist_2='/home/polychoron/dev/isa/api/app'
+let g:netrw_dirhist_3='/home/polychoron/dev/pdr/Lab06/prelab/data'

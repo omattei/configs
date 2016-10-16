@@ -54,6 +54,9 @@ export D_MEDIA=$DATA/Media
 export D_GAMES=$DATA/Games
 export D_MUSIC=$D_MEDIA/Music
 export D_DOC=$DATA/Documents
+export D_DBOX=$D_DOC/Dropbox
+export D_UVA=$D_DBOX/UVA
+
 export D_DL=$D_DOC/Downloads
 export D_FL=/media/fl
 
@@ -62,7 +65,7 @@ export D_DROIDROOT=$DATA/Droid/sdcard0
 
 export D_PDR=$HOME/dev/pdr/
 export D_ISA=$HOME/dev/isa/
-export R_PDR=/data/Repositories/pdr/
+export R_PDR=$D_UVA/CS/2150/
 # XDG settings
 export XDG_CACHE_HOME=~/.cache
 export XDG_CONFIG_HOME=~/.config
@@ -103,6 +106,11 @@ alias sta='git status'
 alias gs='sta'
 alias wim='vim -p'
 alias vim='wim'
+
+alias dps='docker ps -a'
+alias dex='docker exec -it api /bin/bash'
+alias dsql='docker exec -it mysql-cmdline /bin/bash'
+
 
 alias inc="chromium --incognito"
 
