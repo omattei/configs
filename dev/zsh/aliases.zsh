@@ -37,13 +37,13 @@ export DEV_DIR=$HOME/dev
 
 # Environmental variables
 export EDITOR=vim
-export PATH=$PATH:$BINARIES:$TLN
-export PYTHONPATH=$TLN/..:~/dev:$PYTHONPATH
+export PATH=$(ruby -e 'print Gem.user_dir')/bin:$PATH:$BINARIES
+export PYTHONPATH=~/dev:$PYTHONPATH
 
 
 ### ALIASES ###
-PDR1='07'
-PDR2='post'
+PDR1='08'
+PDR2='in'
 
 alias cd1="cd ${D_PDR}Lab${PDR1}/${PDR2}lab && ls"
 alias cd2='cd $DL && ls -tr'
