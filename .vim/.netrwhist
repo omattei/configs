@@ -1,8 +1,7 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =6
-let g:netrw_dirhist_1='/home/polychoron/dev/CavTutor/search'
-let g:netrw_dirhist_2='/home/polychoron/dev/CavTutor/ux/app'
-let g:netrw_dirhist_3='/home/polychoron/dev/CavTutor/ux/app/core'
-let g:netrw_dirhist_4='/home/polychoron/dev/CavTutor/build'
-let g:netrw_dirhist_5='/home/polychoron/dev/CavTutor/ux/app'
-let g:netrw_dirhist_6='/home/polychoron/dev/pdr/Lab11/inlab/doc'
+let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_1='/home/polychoron/dev/pdr/Lab09/postlab'
+let g:netrw_dirhist_2='/home/polychoron/dev/pdr/Lab09'
+let g:netrw_dirhist_3='/home/polychoron/dev/pdr/Lab09/postlab'
+let g:netrw_dirhist_4='/data/Documents/Dropbox/UVA/CS/2150'
+let g:netrw_dirhist_5='/data/Documents/Dropbox/UVA/CS'

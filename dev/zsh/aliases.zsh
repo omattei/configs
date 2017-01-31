@@ -11,7 +11,6 @@ export D_GAMES=$DATA/Games
 export D_MUSIC=$D_MEDIA/Music
 export D_DOC=$DATA/Documents
 export D_DBOX=$D_DOC/Dropbox
-export D_UVA=$D_DBOX/UVA
 
 export D_DL=$D_DOC/Downloads
 export D_FL=/media/fl
@@ -19,9 +18,18 @@ export D_FL=/media/fl
 export D_DROID=$DATA/Droid
 export D_DROIDROOT=$DATA/Droid/sdcard0
 
-export D_PDR=$HOME/dev/pdr/
-export D_ISA=$HOME/dev/isa/
-export R_PDR=$D_UVA/CS/2150/
+export D_UVA=$D_DBOX/UVA
+export D_CS=$D_UVA/CS
+export D_APMA=$D_UVA/APMA
+export D_STS=$D_UVA/STS
+
+export D_CSEM=$D_CS/2190
+export D_COMPARCH=$D_CS/3330
+export D_ALGO=$D_CS/4102
+export D_DADA=$D_CS/4630
+export D_TANDP=$D_CS/2760
+
+export D_LINEAR=$D_APMA/3080
 # XDG settings
 export XDG_CACHE_HOME=~/.cache
 export XDG_CONFIG_HOME=~/.config
@@ -42,10 +50,7 @@ export PYTHONPATH=~/dev:$PYTHONPATH
 
 
 ### ALIASES ###
-PDR1='08'
-PDR2='in'
-
-alias cd1="cd ${D_PDR}Lab${PDR1}/${PDR2}lab && ls"
+alias cd1="cd ${D_UVA} && ls"
 alias cd2='cd $DL && ls -tr'
 
 alias aud0='sed -si "s/.card [1,2,3]/.card 0/g" ~/.asoundrc'
