@@ -82,6 +82,7 @@ export DEV_DIR=$HOME/dev
 
 # Environmental variables
 export EDITOR=vim
+export BROWSER=ff
 export PATH=$PATH:$BINARIES:$TLN
 export PYTHONPATH=$TLN/..:~/dev:$PYTHONPATH
 
@@ -91,8 +92,7 @@ source $ZSH_HOME/virtualenvwrapper.zsh
 
 alias cd1='cd $D_PDR/Lab07/prelab && ls'
 alias cd2='cd $DL && ls -tr'
-alias cd3='cd $D_UVA/CS3102_Theory_of_Computation/Problem_Sets && ls'
-alias cd4='cd $D_UVA/CS3205_HCI/Proj_2 && ls'
+alias cd3='cd /data/Dropbox/UVA/CS/3330/bomb468/ && ls -tr'
 
 alias ls='ls++ -al'
 alias lsp='ls++ --potsf'
