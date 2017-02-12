@@ -38,5 +38,5 @@ xmodshit &
 sleepytime &
 xautolock -time 10 -locker lock &
 dropbox &
-
+setwall &
 exec i3
