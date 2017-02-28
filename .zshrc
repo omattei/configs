@@ -44,6 +44,7 @@ DISABLE_AUTO_UPDATE="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(git)
 
+
 source $ZSH/oh-my-zsh.sh
 
 # File hierarchy...
@@ -62,11 +63,18 @@ export D_FL=/media/fl
 export D_DROID=$DATA/Droid
 export D_DROIDROOT=$DATA/Droid/sdcard0
 
-#export D_PDR=/data/Dropbox/UVa_Classes/CS2150_PDR/
-export D_PDR=$HOME/dev/pdr-content
-export D_TOC=$D_UVA/CS3102_Theory_of_Computation
-export D_ISA=$HOME/dev/isa
-export R_PDR=/data/Repositories/aaronbloomfield/pdr
+export D_UVA=$D_DROPBOX/UVA
+export D_CS=$D_UVA/CS
+export D_APMA=$D_UVA/APMA
+export D_STS=$D_UVA/STS
+
+export D_CSEM=$D_CS/2190
+export D_COMPARCH=$D_CS/3330
+export D_ALGO=$D_CS/4102
+export D_DADA=$D_CS/4630
+export D_TANDP=$D_CS/2760
+
+export D_LINEAR=$D_APMA/3080
 # XDG settings
 export XDG_CACHE_HOME=~/.cache
 export XDG_CONFIG_HOME=~/.config
