@@ -91,7 +91,7 @@ export DEV_DIR=$HOME/dev
 # Environmental variables
 export EDITOR=vim
 export BROWSER=ff
-export PATH=$PATH:$BINARIES:$TLN
+export PATH=$PATH:$BINARIES:$TLN:/home/polychoron/.gem/ruby/2.4.0/bin
 export PYTHONPATH=$TLN/..:~/dev:$PYTHONPATH
 
 # Source virtualenvwrapper settings
@@ -111,8 +111,9 @@ alias gc='git commit'
 alias sta='git status'
 alias gs='sta'
 alias wim='vim -p'
-alias vim='wim'
-
+alias vim='vim -p'
+alias vi='vim -p'
+alias untar='tar xvf'
 alias inc="chromium --incognito"
 
 bones(){

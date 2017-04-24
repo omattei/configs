@@ -3,10 +3,16 @@ Xft*antialias: true
 Xft*autohint: true
 Xft*rgba: vbgr
 
-#define FONT_NORMAL     xft:Inconsolata-g:pixelsize=16:embolden=1,xft:Anonymous Pro:style=Regular:pixelsize=10:antialias=3:autohint=1:hintstyle=3
-#define FONT_BOLD       xft:Inconsolata-g:style=Bold:slant=10:pixelsize=16:embolden=1
-#define FONT_ITALIC     xft:Inconsolata-g:style=Bold:slant=50:pixelsize=16:embolden=1
-#define FONT_BOLDITALIC FONT_ITALIC
+#define FONT_NORMAL     xft:Inconsolata-g:pixelsize=16:embolden=1,\
+                        xft:FontAwesome:pixelsize=16,\
+                        xft:Anonymous Pro:style=Regular:pixelsize=16:antialias=3:autohint=1:hintstyle=3,\
+                        xft:DejaVu Sans:pixelsize=16,\
+                        xft:Unifont:fontformat=truetype:pixelsize=16:antialias=false\
+                        xft:Source Code Pro:pixelsize=16:style=medium:antialias=true\
+                        xft:Noto Emoji:style=Regular:pixelsize=16
+#define FONT_BOLD       xft:Inconsolata-g:style=Bold:pixelsize=16:embolden=1
+#define FONT_ITALIC     xft:Profont:pixelsize=16:embolden=1
+#define FONT_BOLDITALIC -misc-fixed-medium-r-normal--7-70-75-75-c-50-koi8
 
 vte*font:       FONT_NORMAL
 vte*boldFont:   FONT_BOLD
