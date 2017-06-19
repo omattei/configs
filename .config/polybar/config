@@ -55,7 +55,8 @@ modules-right = filesystem xbacklight weather volume updates memory cpu wlan bat
 
 tray-position = right
 tray-padding = 2
-tray-transparent = true
+tray-transparent = false
+;tray-transparent = true
 ;tray-background = #0063ff
 
 ;wm-restack = bspwm
@@ -71,7 +72,7 @@ scroll-down = i3wm-wsprev
 
 [module/updates]
 type = custom/script
-interval = 1200
+interval = 60
 format = <label>
 format-underline = #d14200
 label = "%output:0:30%"

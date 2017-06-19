@@ -35,9 +35,10 @@ fi
 
 xset -dpms &
 xmodshit &
-polybar main &
 sleepytime &
 xautolock -time 10 -locker lock &
+urxvtd &
 dropbox &
 setwall &
+#compton &
 exec i3

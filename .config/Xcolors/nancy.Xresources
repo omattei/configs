@@ -328,7 +328,7 @@ yemen.color254:       #e4e4e4
 yemen.color255:       #eeeeee
 !>
 !< vim
-vim.foreground:     #fff
+vim.foreground:     #ffffff
 vim.background:     #010101
 vim.colorBD:        #7e6449
 vim.colorIT:        #7c7e49

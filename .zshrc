@@ -104,7 +104,8 @@ alias cd3='cd /data/Dropbox/UVA/CS/3330/bomb468/ && ls -tr'
 
 alias ls='ls++ -al'
 alias lsp='ls++ --potsf'
-alias urxvt='urxvt -name mongolia'
+alias urxvt='wrxvt'
+
 alias gp='git push'
 alias ga='git add'
 alias gc='git commit'
