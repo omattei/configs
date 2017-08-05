@@ -13,11 +13,6 @@ runtime! archlinux.vim
 " If you prefer the old-style vim functionalty, add 'runtime! vimrc_example.vim'
 " Or better yet, read /usr/share/vim/vim74/vimrc_example.vim or the vim manual
 " and configure vim to your own liking!
-" ==============================================================================
-" BEGIN polychoron config
-" ==============================================================================
-
-
 
 execute pathogen#infect()
 
@@ -184,21 +179,6 @@ function! RotateColorTheme()
 endfunction
 " }}}
 
-"{{{ Paste Toggle
-let paste_mode = 0 " 0 = normal, 1 = paste
-
-func! Paste_on_off()
-   if g:paste_mode == 0
-      set paste
-      let g:paste_mode = 1
-   else
-      set nopaste
-      let g:paste_mode = 0
-   endif
-   return
-endfunc
-"}}}
-
 "{{{ Todo List Mode
 
 function! TodoListMode()
@@ -212,6 +192,77 @@ function! TodoListMode()
 endfunction
 
 "}}}
+
+let s:comment_map = {
+    \   "c": '\/\/',
+    \   "cpp": '\/\/',
+    \   "go": '\/\/',
+    \   "java": '\/\/',
+    \   "javascript": '\/\/',
+    \   "lua": '--',
+    \   "scala": '\/\/',
+    \   "php": '\/\/',
+    \   "python": '#',
+    \   "ruby": '#',
+    \   "rust": '\/\/',
+    \   "sh": '#',
+    \   "desktop": '#',
+    \   "fstab": '#',
+    \   "conf": '#',
+    \   "profile": '#',
+    \   "bashrc": '#',
+    \   "bash_profile": '#',
+    \   "mail": '>',
+    \   "eml": '>',
+    \   "bat": 'REM',
+    \   "ahk": ';',
+    \   "vim": '"',
+    \   "tex": '%',
+    \ }
+
+function! ToggleComment()
+    if has_key(s:comment_map, &filetype)
+        let comment_leader = s:comment_map[&filetype]
+        if getline('.') =~ "^" . comment_leader . " "
+            " Uncomment the line
+            execute "silent s/^" . comment_leader . " //"
+        else
+            if getline('.') =~ "^" . comment_leader
+                " Uncomment the line
+                execute "silent s/^" . comment_leader . " //"
+            else
+                " Comment the line
+                execute "silent s/^/" . comment_leader . " /"
+            end
+        end
+    else
+        echo "No comment leader found for filetype"
+    end
+endfunction
+
+" Taken from https://stackoverflow.com/a/24046914 and modified
+" function! ToggleComment()
+"     if has_key(s:comment_map, &filetype)
+"         let comment_leader = s:comment_map[&filetype]
+"         if getline('.') =~ "^\\s*" . comment_leader . " "
+"             " Uncomment the line
+"             execute "silent s/^\\(\\s*\\)" . comment_leader . " /\\1/"
+"         else
+"             if getline('.') =~ "^\\s*" . comment_leader
+"                 " Uncomment the line
+"                 execute "silent s/^\\(\\s*\\)" . comment_leader . "/\\1/"
+"             else
+"                 " Comment the line
+"                 execute "silent s/^\\(\\s*\\)/\\1" . comment_leader . " /"
+"             end
+"         end
+"     else
+"         echo "No comment leader found for filetype"
+"     end
+" endfunction
+
+nnoremap <leader><Space> :call ToggleComment()<cr>
+vnoremap <leader><Space> :call ToggleComment()<cr>
 
 "}}}
 "{{{Taglist configuration
@@ -236,3 +287,5 @@ au FileType * exec("setlocal dictionary+=/usr/share/vim/vimfiles/dictionaries/".
 set complete+=
 
 autocmd BufNewFile,BufRead *.tex set makeprg=pdflatex\ %\ &&\ evince\ %:r.pdf
+
+set pastetoggle=<F3>
