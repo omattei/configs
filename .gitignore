@@ -1,0 +1,15 @@
+# Ignore everything by default
+*
+
+# Except things I specifically add through force, or found below
+!.gitignore
+
+!.i3/
+!.vim/
+
+!dev/zsh/
+!.Xresources
+!.bashrc
+!.xinitrc
+!.zshrc
+!README.md

@@ -26,7 +26,6 @@ set $WS0 0: misc
 # is used in the bar {} block below. ISO 10646 = Unicode
 #font  xft:Profont:style=SemiCondensed:pixelsize=14,xft:Anonymous Pro:style=Regular:pixelsize=12:antialias=3:autohint=1:hintstyle=3
 #font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
-exec --no-startup-id setwall
 
 # The font above is very space-efficient, that is, it looks good, sharp and
 # clear in small sizes. However, if you need a lot of unicode glyphs or
@@ -207,4 +206,7 @@ bindsym $mod+r mode "resize"
 #    position          top
 #    workspace_buttons yes
 #}
-
+exec_always --no-startup-id $HOME/.config/polybar/launch &
+exec --no-startup-id setwall
+#exec polybar mainB
+#exec polybar mainA
