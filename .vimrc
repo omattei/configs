@@ -17,7 +17,7 @@ runtime! archlinux.vim
 " BEGIN polychoron config
 " ==============================================================================
 
-
+set pastetoggle=<F3>
 
 execute pathogen#infect()
 
@@ -118,6 +118,18 @@ nnoremap k gk
 
 nnoremap JJJJ <Nop>
 
+" Go to tab by number
+noremap <leader>1 1gt
+noremap <leader>2 2gt
+noremap <leader>3 3gt
+noremap <leader>4 4gt
+noremap <leader>5 5gt
+noremap <leader>6 6gt
+noremap <leader>7 7gt
+noremap <leader>8 8gt
+noremap <leader>9 9gt
+noremap <leader>0 :tablast<cr>
+
 " Incremental searching is sexy
 set incsearch
 
@@ -184,20 +196,6 @@ function! RotateColorTheme()
 endfunction
 " }}}
 
-"{{{ Paste Toggle
-let paste_mode = 0 " 0 = normal, 1 = paste
-
-func! Paste_on_off()
-   if g:paste_mode == 0
-      set paste
-      let g:paste_mode = 1
-   else
-      set nopaste
-      let g:paste_mode = 0
-   endif
-   return
-endfunc
-"}}}
 
 "{{{ Todo List Mode
 
@@ -234,6 +232,7 @@ set grepprg=grep\ -nH\
 
 au FileType * exec("setlocal dictionary+=/usr/share/vim/vimfiles/dictionaries/".expand('<amatch>'))
 set complete+=
+let g:powerline_pycmd="py3"
 
 au BufRead,BufNewFile *.md setlocal textwidth=80
 autocmd BufNewFile,BufRead *.tex set makeprg=pdflatex\ %\ &&\ evince\ %:r.pdf

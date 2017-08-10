@@ -1,4 +1,3 @@
-
 ### OMZ ###
 
 
@@ -44,135 +43,12 @@ DISABLE_AUTO_UPDATE="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(git)
 
-
 source $ZSH/oh-my-zsh.sh
 
-# File hierarchy...
-export DATA=/data
-export D_CODE=$DATA/Code
-export D_WEB=$D_WWW
-export D_MEDIA=$DATA/Media
-export D_GAMES=$DATA/Games
-export D_MUSIC=$D_MEDIA/Music
-export D_DOC=$DATA/Documents
-export D_DROPBOX=$DATA/Dropbox
-export D_UVA=$D_DROPBOX/UVa_Classes
-export D_DL=$DATA/Downloads
-export D_FL=/media/fl
+source $ZSH_HOME/alias.zsh
+source $ZSH_HOME/func.zsh
+source $ZSH_HOME/export.zsh
 
-export D_DROID=$DATA/Droid
-export D_DROIDROOT=$DATA/Droid/sdcard0
-
-export D_UVA=$D_DROPBOX/UVA
-export D_CS=$D_UVA/CS
-export D_APMA=$D_UVA/APMA
-export D_STS=$D_UVA/STS
-
-export D_CSEM=$D_CS/2190
-export D_COMPARCH=$D_CS/3330
-export D_ALGO=$D_CS/4102
-export D_DADA=$D_CS/4630
-export D_TANDP=$D_CS/2760
-
-export D_LINEAR=$D_APMA/3080
-# XDG settings
-export XDG_CACHE_HOME=~/.cache
-export XDG_CONFIG_HOME=~/.config
-export XDG_DATA_HOME=$HOME/.local/share
-
-# Commonly-used dir shortcuts
-export BINARIES=~/bin
-#export MC=$HOME/.minecraft
-export MC=$D_GAMES/Minecraft
-export CODE=$D_CODE
-export DL=$D_DL
-export DEV_DIR=$HOME/dev
-
-# Environmental variables
-export EDITOR=vim
-export BROWSER=ff
-export PATH=$PATH:$BINARIES:$TLN:/home/polychoron/.gem/ruby/2.4.0/bin
-export PYTHONPATH=$TLN/..:~/dev:$PYTHONPATH
-
-# Source virtualenvwrapper settings
-source $ZSH_HOME/virtualenvwrapper.zsh
-
-
-alias cd1='cd $D_PDR/Lab07/prelab && ls'
-alias cd2='cd $DL && ls -tr'
-alias cd3='cd /data/Dropbox/UVA/CS/3330/bomb468/ && ls -tr'
-
-alias ls='ls++ -al'
-alias lsp='ls++ --potsf'
-alias urxvt='wrxvt'
-
-alias gp='git push'
-alias ga='git add'
-alias gc='git commit'
-alias sta='git status'
-alias gs='sta'
-alias wim='vim -p'
-alias vim='vim -p'
-alias vi='vim -p'
-alias untar='tar xvf'
-alias inc="chromium --incognito"
-
-bones(){
-  sleep 3s
-  xdotool mousedown 3
-}
-
-extract() {
-    local c e i
-
-    (($#)) || return
-
-    for i; do
-        c=''
-        e=1
-
-        if [[ ! -r $i ]]; then
-            echo "$0: file is unreadable: \`$i'" >&2
-            continue
-        fi
-
-        case $i in
-        *.t@(gz|lz|xz|b@(2|z?(2))|a@(z|r?(.@(Z|bz?(2)|gz|lzma|xz)))))
-               c='bsdtar xvf';;
-        *.7z)  c='7z x';;
-        *.Z)   c='uncompress';;
-        *.bz2) c='bunzip2';;
-        *.exe) c='cabextract';;
-        *.gz)  c='gunzip';;
-        *.rar) c='unrar x';;
-        *.xz)  c='unxz';;
-        *.zip) c='unzip';;
-        *)     echo "$0: unrecognized file extension: \`$i'" >&2
-               continue;;
-        esac
-
-        command $c "$i"
-        e=$?
-    done
-
-    return $e
-}
-
-alias ..='cd ..'
-alias mkdir='mkdir -p -v'
-alias cp='cp -rf'
-#alias grep='grep --color=auto'
-alias grep="/bin/grep $GREP_OPTIONS"
-unset GREP_OPTIONS
-
-alias more='less'
-
-alias spellck="aspell -t -c"
-
-TZ='America/New_York'; export TZ
-HISTFILE=~/.zshhistory
-HISTSIZE=5000
-SAVEHIST=1000000
 setopt extended_history
 setopt share_history
 function history_all { history -E 1 }

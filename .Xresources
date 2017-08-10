@@ -1,38 +1,14 @@
-Xft*dpi: 120
-Xft*antialias: true
-Xft*autohint: true
-Xft*rgba: vbgr
+Xft*dpi:                    120
+Xft*antialias:              true
+Xft*autohint:               true
+Xft*rgba:                   vbgr
 
-#define FONT_NORMAL     xft:Inconsolata-g:pixelsize=16:embolden=1,\
-                        xft:FontAwesome:pixelsize=16,\
-                        xft:Anonymous Pro:style=Regular:pixelsize=16:antialias=3:autohint=1:hintstyle=3,\
-                        xft:DejaVu Sans:pixelsize=16,\
-                        xft:Unifont:fontformat=truetype:pixelsize=16:antialias=false\
-                        xft:Source Code Pro:pixelsize=16:style=medium:antialias=true\
-                        xft:Noto Emoji:style=Regular:pixelsize=16
-#define FONT_BOLD       xft:Inconsolata-g:style=Bold:pixelsize=16:embolden=1
-#define FONT_ITALIC     xft:Profont:pixelsize=16:embolden=1
-#define FONT_BOLDITALIC -misc-fixed-medium-r-normal--7-70-75-75-c-50-koi8
+vim*scrollBar:              false
+vim.iso14755:               1
+vim.iso14755_52:            1
 
-vte*font:       FONT_NORMAL
-vte*boldFont:   FONT_BOLD
-vte*italicFont: FONT_ITALIC
-vte*background: #121212
-vte*foreground: #d6d6d6
-vte*scrollBar:  false
-
-vim*font:                         FONT_NORMAL
-vim*boldFont:                     FONT_BOLD
-vim*italicFont:                   FONT_ITALIC
-vim*boldItalicFont:               FONT_BOLDITALIC
-vim*background:                   #080808
-vim*foreground:                   #ebebeb
-vim*scrollBar:                    false
-vim.iso14755:             1
-vim.iso14755_52:          1
-
-vim.skipBuiltinGlyphs:    1
-vim.insecure:             1
+vim.skipBuiltinGlyphs:      1
+vim.insecure:               1
 
 yemen.iso14755:             1
 yemen.iso14755_52:          1
@@ -43,10 +19,15 @@ yemen.buffered:             0
 yemen.internalBorder:       0
 yemen.externalBorder:       0
 
-yemen.font:             FONT_NORMAL
-yemen.boldFont:         FONT_BOLD
-yemen.italicFont:       FONT_ITALIC
-yemen.boldItalicFont:   FONT_BOLDITALIC
+! yemen.font:                 xft:Source Code Pro for Powerline:pixelsize=16:embolden=1
+! yemen.font:                 xft:Neep Alt:style=SemiCondensed:pixelsize=11,xft:Inconsolata\\-g for Powerline:pixelsize=14:embolden=1
+yemen.font:                 xft:Inconsolata\\-g for Powerline:pixelsize=14:embolden=1
+! yemen.boldFont:             xft:Source Code Pro for Powerline:pixelsize=16:embolden=1:style=Bold
+! yemen.boldFont:             xft:Neep Alt:style=Bold SemiCondensed:pixelsize=11,xft:Inconsolata\\-g for Powerline:pixelsize=14:embolden=1:style=Bold
+yemen.boldFont:             xft:Inconsolata\\-g for Powerline:pixelsize=14:embolden=1:style=Bold
+yemen.italicFont:           xft:Profont for Powerline:pixelsize=16:embolden=1
+yemen.boldItalicFont:       -misc-fixed-medium-normal--7-70-75-75-c-50-koi8
+
 
 yemen*cutchars:             "()*,<>[]{}|'"
 yemen*matcher.pattern.1:    \\bwww\\.[\\w-]+\\.[\\w./?&@#-]*[\\w/-]
@@ -77,11 +58,11 @@ yemen.depth:                24
 URxvt.perl-ext-common:      default,clipboard,selection-to-clipboard,url-select,keyboard-select
 URxvt.url-select.launcher:  firefox
 URxvt.url-select.underline: true
-URxvt.keysym.M-u:           perl:url-select:select_next
-URxvt.keysym.M-Escape:      perl:keyboard-select:activate
-URxvt.keysym.M-s:           perl:keyboard-select:search
-URxvt.keysym.Shift-Control-C : perl:clipboard:copy
-URxvt.keysym.Shift-Control-V : perl:clipboard:paste
+! URxvt.keysym.M-u:           perl:url-select:select_next
+! URxvt.keysym.M-Escape:      perl:keyboard-select:activate
+! URxvt.keysym.M-s:           perl:keyboard-select:search
+! URxvt.keysym.Shift-Control-C : perl:clipboard:copy
+! URxvt.keysym.Shift-Control-V : perl:clipboard:paste
 
 *.foreground:   #c6c6c6
 *.background:   #1f1f1f
@@ -103,9 +84,8 @@ URxvt.keysym.Shift-Control-V : perl:clipboard:paste
 *.color14:      #8abeb7
 *.color7:       #c5c8c6
 *.color15:      #c5c8c6
-
-*fading:                15
-*fadeColor:             black
+!*fading:                15
+!*fadeColor:             black
 *pointerColorBackground:#2B2C2B
 *pointerColorForeground:#16A085
 
