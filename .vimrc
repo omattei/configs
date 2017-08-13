@@ -289,3 +289,6 @@ set complete+=
 autocmd BufNewFile,BufRead *.tex set makeprg=pdflatex\ %\ &&\ evince\ %:r.pdf
 
 set pastetoggle=<F3>
+nnoremap <F4> :set number!<cr>
+vnoremap <F4> :set number!<cr>
+
