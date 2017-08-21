@@ -1,0 +1,5 @@
+include "/usr/share/X11/locale/en_US.UTF-8/Compose"
+
+<Multi_key>     <t>     <r>     <i> : "▲"   U25B2   # Triangle
+<Multi_key>     <R>     <x>         : "℞"   U211E   # PRESCRIPTION TAKE
+

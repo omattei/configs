@@ -1,5 +1,5 @@
 # .xinitrc file
-# Andrea Shaw <rshaw@olivermattei.net>
+# Rachel Shaw <rshaw@olivermattei.net>
 
 #!/bin/sh
 userresources=$HOME/.Xresources
