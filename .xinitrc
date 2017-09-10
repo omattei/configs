@@ -37,6 +37,9 @@ xset -dpms &
 xmodshit &
 sleepytime &
 xautolock -time 10 -locker lock &
-dropbox &
-
+urxvtd &
+#dropbox &
+nextcloud &
+setwall &
+#compton &
 exec i3
