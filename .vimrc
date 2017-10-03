@@ -212,6 +212,7 @@ let s:comment_map = {
     \   "profile": '#',
     \   "bashrc": '#',
     \   "bash_profile": '#',
+    \   "yaml": '#',
     \   "mail": '>',
     \   "eml": '>',
     \   "bat": 'REM',

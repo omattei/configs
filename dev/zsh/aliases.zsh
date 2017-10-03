@@ -10,7 +10,8 @@ export D_MEDIA=$DATA/Media
 export D_GAMES=$DATA/Games
 export D_MUSIC=$D_MEDIA/Music
 export D_DOC=$DATA/Documents
-export D_DBOX=$D_DOC/Dropbox
+#export D_DBOX=$D_DOC/Dropbox
+export D_NCLOUD=$D_DOC/NextCloud
 
 export D_DL=$D_DOC/Downloads
 export D_FL=/media/fl
@@ -18,18 +19,11 @@ export D_FL=/media/fl
 export D_DROID=$DATA/Droid
 export D_DROIDROOT=$DATA/Droid/sdcard0
 
-export D_UVA=$D_DBOX/UVA
+export D_UVA=$D_NCLOUD/UVA
 export D_CS=$D_UVA/CS
 export D_APMA=$D_UVA/APMA
 export D_STS=$D_UVA/STS
 
-export D_CSEM=$D_CS/2190
-export D_COMPARCH=$D_CS/3330
-export D_ALGO=$D_CS/4102
-export D_DADA=$D_CS/4630
-export D_TANDP=$D_CS/2760
-
-export D_LINEAR=$D_APMA/3080
 # XDG settings
 export XDG_CACHE_HOME=~/.cache
 export XDG_CONFIG_HOME=~/.config
@@ -68,8 +62,11 @@ alias wim='vim -p'
 alias vim='wim'
 
 alias dps='docker ps -a'
-alias dex='docker exec -it api /bin/bash'
-alias dsql='docker exec -it mysql-cmdline /bin/bash'
+alias dex='docker exec -it www /bin/bash'
+alias dsql='docker exec -it db_adm /bin/bash'
+alias dup='docker-compose -f ~/dev/cs4970-mvc/docker-compose-django.yml up'
+alias djup='docker-compose -f ~/dev/cs4970-mvc/docker-compose-django.yml up'
+alias drup='docker-compose -f ~/dev/cs4970-mvc/docker-compose-rails.yml up'
 
 alias inc="chromium --incognito"
 

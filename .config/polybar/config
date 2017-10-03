@@ -50,7 +50,7 @@ font-4 = DejaVu Sans:pixelsize=14;0
 
 modules-left = i3
 modules-center =
-modules-right = filesystem weather volume updates memory cpu eth temperature date powermenu
+modules-right = mpd filesystem weather volume updates memory cpu eth temperature date powermenu
 ;modules-right = filesystem xbacklight volume xkeyboard memory cpu wlan eth battery temperature date powermenu
 
 tray-position = right
@@ -101,7 +101,7 @@ font-4 = DejaVu Sans:pixelsize=14;0
 
 modules-left = i3
 modules-center =
-modules-right = filesystem weather volume updates memory cpu eth temperature date powermenu
+modules-right = mpd filesystem weather volume updates memory cpu eth temperature date powermenu
 ;modules-right = filesystem xbacklight volume xkeyboard memory cpu wlan eth battery temperature date powermenu
 
 tray-position = right
@@ -309,6 +309,15 @@ format-disconnected = <label-disconnected>
 format-disconnected-underline = ${self.format-connected-underline}
 label-disconnected = %ifname% disconnected
 label-disconnected-foreground = ${colors.foreground-alt}
+
+[module/mpd]
+type = internal/mpd
+
+host = 127.0.0.1
+port = 6600
+password =
+
+interval = 1
 
 [module/date]
 type = internal/date

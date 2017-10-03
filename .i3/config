@@ -127,7 +127,7 @@ bindsym $mod+Shift+6 move container to workspace $WS6
 bindsym $mod+Shift+7 move container to workspace $WS7
 bindsym $mod+Shift+8 move container to workspace $WS8
 bindsym $mod+Shift+9 move container to workspace $WS9
-bindsym $mod+Shift+0 move container to workspace $S0
+bindsym $mod+Shift+0 move container to workspace $WS0
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -136,14 +136,16 @@ bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
-#for_window [title="QUAKE LIVE Launcher" class="Wine"] floating enable
-#for_window [title="Quake Live" class="Wine"] floating enable
+for_window [title="QUAKE LIVE Launcher" class="Wine"] floating enable
+for_window [title="Quake Live" class="Wine"] floating enable
+for_window [title="NVIDIA X Server Settings" class="nvidia-settings"] floating enable
 
 bindsym $mod+Shift+a exec "minecraft"
 bindsym $mod+Shift+s exec "spotify"
 bindsym $mod+Shift+f exec "/home/polychoron/bin/ff"
 bindsym $mod+Shift+p exec "thunderbird"
 bindsym $mod+Shift+v exec "vlc"
+bindsym $mod+Shift+backslash exec "pavucontrol"
 #bindsym $mod+Shift+l exec "systemctl suspend"
 bindsym $mod+Shift+l exec "lock"
 
@@ -159,10 +161,12 @@ bindsym XF86AudioMute exec amixer -D pulse sset Master toggle
 bindsym XF86MonBrightnessUp exec xbacklight -inc 5
 bindsym XF86MonBrightnessDown exec xbacklight -dec 5
 
-bindsym XF86AudioPlay exec playerctl play-pause
-#bindsym XF86AudioPause exec playerctl play-`pause
-bindsym XF86AudioNext exec playerctl next
-bindsym XF86AudioPrev exec playerctl previous
+# bindsym XF86AudioPlay exec playerctl play-pause
+# bindsym XF86AudioNext exec playerctl next
+# bindsym XF86AudioPrev exec playerctl previous
+bindsym XF86AudioPlay exec mpc toggle
+bindsym XF86AudioNext exec mpc next
+bindsym XF86AudioPrev exec mpc prev
 
 bindsym XF86Search exec "rofi -show run"
 # END DELL XPS 15 9550 Function Keys
