@@ -93,7 +93,8 @@ mongolia.color17:        #00005f
 mongolia.color18:        #000087
 mongolia.color19:        #0000af
 mongolia.color20:        #0000d7
-mongolia.color21:        #0000ff
+/* mongolia.color21:        #0000ff */
+mongolia.color21:        #ef2d56
 mongolia.color22:        #005f00
 mongolia.color23:        #005f5f
 mongolia.color24:        #005f87
@@ -364,7 +365,8 @@ vim.color17:        #00005f
 vim.color18:        #000087
 vim.color19:        #0000af
 vim.color20:        #0000d7
-vim.color21:        #0000ff
+/* vim.color21:        #0000ff */
+vim.color21:        #ef2d56
 vim.color22:        #005f00
 vim.color23:        #005f5f
 vim.color24:        #005f87

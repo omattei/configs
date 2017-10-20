@@ -86,6 +86,7 @@ hi StatusLineNC    guifg=#1c1c1c guibg=#878700
 hi StorageClass    guifg=#ff8700
 hi Structure       guifg=#5fd7ff
 hi Tag             guifg=#d7005f
+" hi Title           guifg=#0000ff
 hi Title           guifg=#0000ff
 hi Todo            guifg=#d70000 guibg=#121212 gui=bold
 

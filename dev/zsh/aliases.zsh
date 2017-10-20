@@ -21,6 +21,7 @@ export D_DROIDROOT=$DATA/Droid/sdcard0
 
 export D_UVA=$D_NCLOUD/UVA
 export D_CS=$D_UVA/CS
+export D_ECE=$D_UVA/ECE
 export D_APMA=$D_UVA/APMA
 export D_STS=$D_UVA/STS
 
@@ -131,4 +132,4 @@ unset GREP_OPTIONS
 alias more='less'
 
 alias spck="aspell -t -c"
-
+alias rgrep="grep -r"

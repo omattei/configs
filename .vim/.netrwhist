@@ -1,11 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =9
-let g:netrw_dirhist_1='/home/polychoron/dev/pdr/Lab09/postlab'
-let g:netrw_dirhist_2='/home/polychoron/dev/pdr/Lab09'
-let g:netrw_dirhist_3='/home/polychoron/dev/pdr/Lab09/postlab'
-let g:netrw_dirhist_4='/data/Documents/Dropbox/UVA/CS/2150'
-let g:netrw_dirhist_5='/data/Documents/Dropbox/UVA/CS'
-let g:netrw_dirhist_6='/home/polychoron/dev/cs4970-mvc/.git'
-let g:netrw_dirhist_7='/home/polychoron/dev/cs4970-mvc/www'
-let g:netrw_dirhist_8='/home/polychoron/dev/cs4970-mvc/django/app/templates/admin'
-let g:netrw_dirhist_9='/home/polychoron/.config/polybar'
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='/home/polychoron/dev/useful-links/utils'
+let g:netrw_dirhist_2='/home/polychoron/dev/pride/app/pride/user/__pycache__'
+let g:netrw_dirhist_3='/home/polychoron/dev/pride/app/pride/volunteer/__pycache__'
+let g:netrw_dirhist_4='/home/polychoron/dev/pride/app/pride/user/__pycache__'
