@@ -39,7 +39,8 @@ sleepytime &
 xautolock -time 10 -locker lock &
 urxvtd &
 #dropbox &
-nextcloud --logfile $XDG_DATA_HOME/nextcloud/nextcloud.log &
+#nextcloud --logfile $XDG_DATA_HOME/nextcloud/nextcloud.log &
+nextcloud &
 setwall &
 #compton &
 exec i3
