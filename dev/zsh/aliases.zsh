@@ -71,6 +71,9 @@ alias drup='docker-compose -f ~/dev/cs4970-mvc/docker-compose-rails.yml up'
 
 alias inc="chromium --incognito"
 
+# From https://askubuntu.com/a/104484
+alias ppt2pdf="libreoffice --headless --invisible --convert-to pdf" 
+
 killmc() {
     mcpid=$(ps aux | grep minecraft | tr ' ' '\n' | head -2 | tail -1)
     if [ -n "$mcpid" ]; then
