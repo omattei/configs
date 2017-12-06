@@ -289,7 +289,15 @@ set complete+=
 
 autocmd BufNewFile,BufRead *.tex set makeprg=pdflatex\ %\ &&\ evince\ %:r.pdf
 
+
+" Customisations based on house-style (arbitrary)
+autocmd FileType markdown setlocal sts=2 ts=2 sw=2 expandtab
+autocmd FileType htmldjango setlocal  sts=2 ts=2 sw=2 expandtab
+autocmd FileType html setlocal ts=2 sts=2 sw=2 expandtab
+
+
 set pastetoggle=<F3>
 nnoremap <F4> :set number!<cr>
 vnoremap <F4> :set number!<cr>
 
+set tabpagemax=100
